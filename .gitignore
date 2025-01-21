@@ -13,3 +13,9 @@
 .externalNativeBuild
 .cxx
 local.properties
+
+# Object file
+*.o
+
+# Ada Library Information
+*.ali
