@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/buttonDrawingMode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Рисования" />
+
+        <Button
+            android:id="@+id/buttonSelectionMode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Выделения" />
+
+        <Button
+            android:id="@+id/buttonSaveAnnotations"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Сохранить" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <com.github.barteksc.pdfviewer.PDFView
+            android:id="@+id/pdfView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.example.pdf_editor_app.DrawingView
+            android:id="@+id/drawing_view"
+            android:layout_width="match_parent"
+            android:layout_height="570dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:background="@android:color/transparent" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/buttonPreviousPage"
+            android:layout_width="113dp"
+            android:layout_height="wrap_content"
+            android:text="Предыдущая" />
+
+        <Button
+            android:id="@+id/buttonNextPage"
+            android:layout_width="113dp"
+            android:layout_height="wrap_content"
+            android:text="Следующая" />
+    </LinearLayout>
+</LinearLayout>

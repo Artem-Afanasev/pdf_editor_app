@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/buttonColor"
+            style="@style/LightGrayButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Color" />
+
+        <Button
+            android:id="@+id/buttonSaveAnnotations"
+            style="@style/LightGrayButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Save" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/buttonAddingText"
+            style="@style/LightGrayButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Text" />
+
+        <Button
+            android:id="@+id/buttonToggleMode"
+            style="@style/LightGrayButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Highlight" />
+
+        <FrameLayout
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            style="@style/LightGrayButton">
+
+            <Button
+                android:id="@+id/buttonPen"
+                style="@style/LightGrayButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text=""
+                android:background="@android:color/transparent"/>
+
+            <ImageView
+                android:id="@+id/imagePen"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/icon_pen"
+                android:layout_gravity="center" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            style="@style/LightGrayButton">
+
+            <Button
+                android:id="@+id/buttonMarker"
+                style="@style/LightGrayButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text=""
+                android:background="@android:color/transparent"/>
+
+            <ImageView
+                android:id="@+id/imageMarker"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/icon_marker"
+                android:layout_gravity="center" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <com.github.barteksc.pdfviewer.PDFView
+            android:id="@+id/pdfView"
+            android:layout_width="match_parent"
+            android:layout_height="570dp" />
+
+        <com.example.pdf_editor_app.TextInputView
+            android:id="@+id/text_input_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:background="@android:color/transparent" />
+
+        <com.example.pdf_editor_app.DrawingView
+            android:id="@+id/drawing_view"
+            android:layout_width="match_parent"
+            android:layout_height="570dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:background="@android:color/transparent" />
+
+        <com.example.pdf_editor_app.HighlightView
+            android:id="@+id/highlight_view"
+            android:layout_width="match_parent"
+            android:layout_height="570dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:background="@android:color/transparent" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/buttonPreviousPage"
+
+            style="@style/LightGrayButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Next" />
+
+        <Button
+            style="@style/LightGrayButton"
+            android:id="@+id/buttonNextPage"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Previous" />
+    </LinearLayout>
+</LinearLayout>
+
